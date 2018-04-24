@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EquipmentService</string>
+    <string name="title_code">管理番号</string>
+    <string name="title_date">棚卸日</string>
+    <string name="title_category">区分</string>
+    <string name="title_admin">管理者</string>
+    <string name="title_updater">更新者</string>
+    <string name="no_data">-</string>
+</resources>

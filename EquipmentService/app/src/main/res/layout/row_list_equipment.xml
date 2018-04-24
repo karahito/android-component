@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="equipment"
+            type="com.japanmicrosystem.equipmentservice.Equipment"/>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/row_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{equipment.code}"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/row_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/row_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{equipment.date}"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/row_category"
+            app:layout_constraintStart_toEndOf="@+id/row_code"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/row_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{equipment.name ?? @string/no_data}"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/row_admin"
+            app:layout_constraintStart_toEndOf="@+id/row_date"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/row_admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{equipment.admin}"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/row_updater"
+            app:layout_constraintStart_toEndOf="@+id/row_category"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/row_updater"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{equipment.updater ?? @string/no_data}"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/row_admin"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</layout>
